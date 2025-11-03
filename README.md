@@ -101,7 +101,7 @@ GitHub Project Board:[Kanban board link](https://github.com/users/sainath2212/pr
 ## 8. Repository Structure
 
 ```
-retail-stock-market-behavior/
+retail-stock-insights/
 │
 ├── data/
 │   ├── raw/
