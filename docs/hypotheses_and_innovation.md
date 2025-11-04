@@ -9,8 +9,9 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 
 ### H1: Does Higher Price Mean Fewer Purchases?
 
-**Hypothesis:** Higher-priced products sell in smaller quantities compared to lower-priced ones.**Testing Approach:**
+**Hypothesis:** Higher-priced products sell in smaller quantities compared to lower-priced ones.
 
+**Testing Approach:**
 - Compare unit price with quantity sold per product.
 - Visualize the relationship between price and quantity.
 - Analyze variation across product categories.
@@ -20,8 +21,9 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 
 ### H2: Can We Predict Big Orders?
 
-**Hypothesis:** Product price, quantity, and category can predict whether an order exceeds £500.**Testing Approach:**
+**Hypothesis:** Product price, quantity, and category can predict whether an order exceeds £500.
 
+**Testing Approach:**
 - Label orders above £500 as “big orders.”
 - Train a machine learning model to classify order size.
 - Measure accuracy and identify key predictive factors.
@@ -31,8 +33,9 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 
 ### H3: Does 20% of Products Make 80% of Revenue? (Pareto Rule)
 
-**Hypothesis:** A small fraction of products account for most revenue.**Testing Approach:**
+**Hypothesis:** A small fraction of products account for most revenue.
 
+**Testing Approach:**
 - Rank products by total sales.
 - Compute cumulative revenue contribution.
 - Test Pareto distribution validity (top 20% ≈ 80% of revenue).
@@ -44,8 +47,9 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 
 ### H4: Does the Christmas Season Increase Sales?
 
-**Hypothesis:** Sales rise during Q4 (Oct–Dec) compared to other quarters.**Testing Approach:**
+**Hypothesis:** Sales rise during Q4 (Oct–Dec) compared to other quarters.
 
+**Testing Approach:**
 - Aggregate monthly revenue.
 - Visualize trends across the year.
 - Identify seasonal peaks and low periods.
@@ -55,8 +59,9 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 
 ### H5: Do Weekends Differ From Weekdays?
 
-**Hypothesis:** Customer purchasing behavior varies between weekends and weekdays.**Testing Approach:**
+**Hypothesis:** Customer purchasing behavior varies between weekends and weekdays.
 
+**Testing Approach:**
 - Classify orders as weekday or weekend.
 - Compare average order values and frequency.
   **Expected Outcome:** Distinct spending or frequency patterns across days.
@@ -65,8 +70,9 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 
 ### H6: What Time of Day Do People Buy Most?
 
-**Hypothesis:** Purchases cluster during daytime hours.**Testing Approach:**
+**Hypothesis:** Purchases cluster during daytime hours.
 
+**Testing Approach:**
 - Extract transaction hours from timestamps.
 - Aggregate order counts and values per hour.
 - Identify peak shopping hours.
@@ -78,8 +84,9 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 
 ### H7: Can We Group Customers Into Types?
 
-**Hypothesis:** Customers can be grouped by behavioral traits (frequency, spending, recency).**Testing Approach:**
+**Hypothesis:** Customers can be grouped by behavioral traits (frequency, spending, recency).
 
+**Testing Approach:**
 - Compute Recency, Frequency, and Monetary (RFM) scores.
 - Perform clustering to identify customer segments.
 - Characterize each cluster based on purchasing behavior.
@@ -89,8 +96,9 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 
 ### H8: Do Customers From Different Countries Shop Differently?
 
-**Hypothesis:** Purchasing behavior differs significantly across countries.**Testing Approach:**
+**Hypothesis:** Purchasing behavior differs significantly across countries.
 
+**Testing Approach:**
 - Analyze top five countries by sales volume.
 - Compare average order value, frequency, and product preferences.
   **Expected Outcome:** Regional variations in product preferences and order values.
@@ -101,8 +109,9 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 
 ### H9: Which Products Are Frequently Bought Together?
 
-**Hypothesis:** Certain product pairs co-occur in the same transaction frequently.**Testing Approach:**
+**Hypothesis:** Certain product pairs co-occur in the same transaction frequently.
 
+**Testing Approach:**
 - Generate association rules using market basket analysis.
 - Calculate support, confidence, and lift for each pair.
   **Expected Outcome:** Identification of 10–20 high-support product combinations.
@@ -111,8 +120,9 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 
 ### H10: Can Product Recommendations Increase Sales?
 
-**Hypothesis:** Recommending complementary products increases transaction value.**Testing Approach:**
+**Hypothesis:** Recommending complementary products increases transaction value.
 
+**Testing Approach:**
 - Simulate adding top product pairs as recommendations.
 - Estimate revenue uplift based on cross-sell frequency.
   **Expected Outcome:** Recommendation strategies can raise average order value by 10–15%.
@@ -123,8 +133,9 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 
 ### H11: Which Factors Most Influence Revenue?
 
-**Hypothesis:** Price and quantity are the strongest predictors of order value.**Testing Approach:**
+**Hypothesis:** Price and quantity are the strongest predictors of order value.
 
+**Testing Approach:**
 - Train regression and tree-based models for order value.
 - Use feature importance to rank predictors.
   **Expected Outcome:** Price and quantity dominate, followed by category and timing.
@@ -133,8 +144,9 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 
 ### H12: Which Model Best Predicts Future Sales?
 
-**Hypothesis:** Machine learning models outperform time-series baselines in predicting future sales.**Testing Approach:**
+**Hypothesis:** Machine learning models outperform time-series baselines in predicting future sales.
 
+**Testing Approach:**
 - Build ARIMA, basic regression, and ensemble ML models.
 - Compare prediction errors on unseen data.
   **Expected Outcome:** ML models yield lower error rates.
@@ -143,8 +155,9 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 
 ### H13: Can We Predict Future Spending per Customer?
 
-**Hypothesis:** Past six months’ activity predicts future spending behavior.**Testing Approach:**
+**Hypothesis:** Past six months’ activity predicts future spending behavior.
 
+**Testing Approach:**
 - Train model on first-half spending data.
 - Evaluate predictions against second-half results.
   **Expected Outcome:** Reliable identification of future high-value customers.
@@ -155,8 +168,9 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 
 ### H14: Which Countries Contribute Most Revenue?
 
-**Hypothesis:** A few countries account for most of the total sales volume.**Testing Approach:**
+**Hypothesis:** A few countries account for most of the total sales volume.
 
+**Testing Approach:**
 - Calculate and rank country-level revenue.
 - Analyze top contributors and monthly growth trends.
   **Expected Outcome:** Top five countries generate over 70% of revenue.
@@ -165,8 +179,9 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 
 ### H15: Can We Group Countries Into Market Types?
 
-**Hypothesis:** Countries can be classified as “Premium,” “Emerging,” or “Niche” based on purchasing behavior.**Testing Approach:**
+**Hypothesis:** Countries can be classified as “Premium,” “Emerging,” or “Niche” based on purchasing behavior.
 
+**Testing Approach:**
 - Aggregate metrics per country: average order value, product preference, seasonality.
 - Apply clustering to identify market categories.
   **Expected Outcome:** Discovery of 3–4 distinct market types with unique characteristics.
