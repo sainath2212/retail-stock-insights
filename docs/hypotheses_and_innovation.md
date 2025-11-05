@@ -1,4 +1,4 @@
-# Project Hypotheses & Innovation
+# Hypotheses & Innovation
 
 This document outlines testable hypotheses for the **Retail Stock Insights** project.
 Each hypothesis represents a clear and measurable assumption that will be validated through data analysis and machine learning methods.
