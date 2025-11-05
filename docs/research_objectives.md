@@ -91,26 +91,6 @@ Use machine learning models to forecast sales, customer lifetime value, and chur
 
 ---
 
-## Expected Outcomes
-
-- Identification of key revenue and purchase drivers
-- Insights into seasonal and temporal patterns for improved inventory planning
-- Creation of distinct customer clusters with defined behavioral traits
-- Discovery of cross-selling and bundling opportunities
-- Development of predictive models for demand and customer value
-- Interactive dashboards for dynamic data exploration
-- A transparent and reproducible data-mining pipeline
-
----
-
-## Dataset
-
-**Source:** [UCI Online Retail Dataset (2010–2011)](https://archive.ics.uci.edu/ml/datasets/Online+Retail)**Fields Included:**
-
-- InvoiceNo, StockCode, Description, Quantity, InvoiceDate, UnitPrice, CustomerID, Country
-
----
-
 ## Scope and Limitations
 
 ### Scope
