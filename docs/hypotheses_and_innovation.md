@@ -15,7 +15,8 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 - Compare unit price with quantity sold per product.
 - Visualize the relationship between price and quantity.
 - Analyze variation across product categories.
-  **Expected Outcome:** Higher prices correlate with fewer units sold.
+
+**Expected Outcome:** Higher prices correlate with fewer units sold.
 
 ---
 
@@ -27,7 +28,8 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 - Label orders above £500 as “big orders.”
 - Train a machine learning model to classify order size.
 - Measure accuracy and identify key predictive factors.
-  **Expected Outcome:** Model predicts high-value orders with ≥75% accuracy.
+
+**Expected Outcome:** Model predicts high-value orders with ≥75% accuracy.
 
 ---
 
@@ -39,7 +41,8 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 - Rank products by total sales.
 - Compute cumulative revenue contribution.
 - Test Pareto distribution validity (top 20% ≈ 80% of revenue).
-  **Expected Outcome:** Top 20% of products generate ~80% of total revenue.
+
+**Expected Outcome:** Top 20% of products generate ~80% of total revenue.
 
 ---
 
@@ -53,7 +56,8 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 - Aggregate monthly revenue.
 - Visualize trends across the year.
 - Identify seasonal peaks and low periods.
-  **Expected Outcome:** Peak activity during the holiday season, with drops post-January.
+
+**Expected Outcome:** Peak activity during the holiday season, with drops post-January.
 
 ---
 
@@ -64,7 +68,8 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 **Testing Approach:**
 - Classify orders as weekday or weekend.
 - Compare average order values and frequency.
-  **Expected Outcome:** Distinct spending or frequency patterns across days.
+
+**Expected Outcome:** Distinct spending or frequency patterns across days.
 
 ---
 
@@ -76,7 +81,8 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 - Extract transaction hours from timestamps.
 - Aggregate order counts and values per hour.
 - Identify peak shopping hours.
-  **Expected Outcome:** Increased activity during working or lunch hours.
+
+**Expected Outcome:** Increased activity during working or lunch hours.
 
 ---
 
@@ -90,7 +96,8 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 - Compute Recency, Frequency, and Monetary (RFM) scores.
 - Perform clustering to identify customer segments.
 - Characterize each cluster based on purchasing behavior.
-  **Expected Outcome:** 3–4 clear customer groups with distinct spending habits.
+
+**Expected Outcome:** 3–4 clear customer groups with distinct spending habits.
 
 ---
 
@@ -101,7 +108,8 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 **Testing Approach:**
 - Analyze top five countries by sales volume.
 - Compare average order value, frequency, and product preferences.
-  **Expected Outcome:** Regional variations in product preferences and order values.
+
+**Expected Outcome:** Regional variations in product preferences and order values.
 
 ---
 
@@ -114,7 +122,8 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 **Testing Approach:**
 - Generate association rules using market basket analysis.
 - Calculate support, confidence, and lift for each pair.
-  **Expected Outcome:** Identification of 10–20 high-support product combinations.
+
+**Expected Outcome:** Identification of 10–20 high-support product combinations.
 
 ---
 
@@ -125,7 +134,8 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 **Testing Approach:**
 - Simulate adding top product pairs as recommendations.
 - Estimate revenue uplift based on cross-sell frequency.
-  **Expected Outcome:** Recommendation strategies can raise average order value by 10–15%.
+
+**Expected Outcome:** Recommendation strategies can raise average order value by 10–15%.
 
 ---
 
@@ -138,7 +148,8 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 **Testing Approach:**
 - Train regression and tree-based models for order value.
 - Use feature importance to rank predictors.
-  **Expected Outcome:** Price and quantity dominate, followed by category and timing.
+
+**Expected Outcome:** Price and quantity dominate, followed by category and timing.
 
 ---
 
@@ -149,7 +160,8 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 **Testing Approach:**
 - Build ARIMA, basic regression, and ensemble ML models.
 - Compare prediction errors on unseen data.
-  **Expected Outcome:** ML models yield lower error rates.
+  
+**Expected Outcome:** ML models yield lower error rates.
 
 ---
 
@@ -160,7 +172,8 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 **Testing Approach:**
 - Train model on first-half spending data.
 - Evaluate predictions against second-half results.
-  **Expected Outcome:** Reliable identification of future high-value customers.
+
+**Expected Outcome:** Reliable identification of future high-value customers.
 
 ---
 
@@ -173,7 +186,8 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 **Testing Approach:**
 - Calculate and rank country-level revenue.
 - Analyze top contributors and monthly growth trends.
-  **Expected Outcome:** Top five countries generate over 70% of revenue.
+  
+**Expected Outcome:** Top five countries generate over 70% of revenue.
 
 ---
 
@@ -184,7 +198,8 @@ Each hypothesis represents a clear and measurable assumption that will be valida
 **Testing Approach:**
 - Aggregate metrics per country: average order value, product preference, seasonality.
 - Apply clustering to identify market categories.
-  **Expected Outcome:** Discovery of 3–4 distinct market types with unique characteristics.
+
+**Expected Outcome:** Discovery of 3–4 distinct market types with unique characteristics.
 
 ---
 
