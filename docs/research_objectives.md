@@ -124,7 +124,7 @@ Use machine learning models to forecast sales, customer lifetime value, and chur
 
 - Limited to one retailer; findings may not generalize across industries
 - No demographic data such as age or gender
-- Profit margins and cost data unavailable (revenue = Quantity × UnitPrice)
+- Profit margins and cost data unavailable (evenue = Quantity × UnitPrice)
 - Excludes external market factors like promotions or economic conditions
 - Findings are associative, not causal
 - One-year timeframe may not capture long-term trends
