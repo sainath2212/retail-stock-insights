@@ -91,7 +91,7 @@ Through statistical analysis, machine learning, clustering, and association rule
 
 - **Languages:** Python (Pandas, NumPy, Scikit-Learn)  
 - **Visualization:** Matplotlib, Seaborn  
-- **Modeling:** Random Forest, XGBoost, ARIMA, Prophet  
+- **Modeling:** Random Forest, XGBoost
 - **Clustering:** K-Means, DBSCAN, Hierarchical Clustering  
 - **Association Rules:** Apriori, FP-Growth  
 - **Dashboarding:** Streamlit  
