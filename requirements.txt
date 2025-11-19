@@ -5,4 +5,15 @@ seaborn
 matplotlib
 jupyter
 notebook
-
+scikit-learn
+scipy
+statsmodels
+plotly
+dash
+streamlit
+shap
+lime
+xgboost
+lightgbm
+catboost
+wordcloud
