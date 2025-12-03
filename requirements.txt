@@ -17,3 +17,5 @@ xgboost
 lightgbm
 catboost
 wordcloud
+mlxtend
+pydeck
