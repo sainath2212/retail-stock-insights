@@ -1452,6 +1452,79 @@ if df is not None:
                                 Rules with high lift (>1) indicate strong positive associations useful for cross-selling strategies.
                                 </div>
                                 """, unsafe_allow_html=True)
+                                st.markdown("<div class='spacer'></div>", unsafe_allow_html=True)
+                                
+                                # FP-Growth vs Apriori Comparison
+                                st.markdown('<h3 class="subsection-header">Algorithm Comparison: Apriori vs FP-Growth</h3>', unsafe_allow_html=True)
+                                
+                                st.markdown("""
+                                <div class="description-box">
+                                <strong>Note:</strong> While FP-Growth is generally known to be faster than Apriori algorithm 
+                                for frequent itemset mining, the actual performance can vary based on dataset characteristics, 
+                                support thresholds, and implementation details. Below are the results from our analysis:
+                                </div>
+                                """, unsafe_allow_html=True)
+                                
+                                # Comparison results
+                                comparison_data = pd.DataFrame({
+                                    'Algorithm': ['Apriori', 'FP-Growth'],
+                                    'Itemsets Found': [235, 235],
+                                    'Rules Found': [82, 82],
+                                    'Time (seconds)': [3.0763, 4.5387]
+                                })
+                                
+                                st.dataframe(comparison_data, use_container_width=True, hide_index=True)
+                                
+                                # Visualization
+                                fig = go.Figure()
+                                fig.add_trace(go.Bar(
+                                    name='Apriori',
+                                    x=['Itemsets Found', 'Rules Found', 'Time (seconds)'],
+                                    y=[comparison_data.loc[0, 'Itemsets Found'], 
+                                       comparison_data.loc[0, 'Rules Found'], 
+                                       comparison_data.loc[0, 'Time (seconds)']],
+                                    marker_color='#A8D5E3',
+                                    text=[comparison_data.loc[0, 'Itemsets Found'], 
+                                          comparison_data.loc[0, 'Rules Found'], 
+                                          f"{comparison_data.loc[0, 'Time (seconds)']:.4f}"],
+                                    textposition='outside'
+                                ))
+                                fig.add_trace(go.Bar(
+                                    name='FP-Growth',
+                                    x=['Itemsets Found', 'Rules Found', 'Time (seconds)'],
+                                    y=[comparison_data.loc[1, 'Itemsets Found'], 
+                                       comparison_data.loc[1, 'Rules Found'], 
+                                       comparison_data.loc[1, 'Time (seconds)']],
+                                    marker_color='#14b8a6',
+                                    text=[comparison_data.loc[1, 'Itemsets Found'], 
+                                          comparison_data.loc[1, 'Rules Found'], 
+                                          f"{comparison_data.loc[1, 'Time (seconds)']:.4f}"],
+                                    textposition='outside'
+                                ))
+                                fig.update_layout(
+                                    title='Apriori vs FP-Growth Algorithm Comparison',
+                                    xaxis_title='Metric',
+                                    yaxis_title='Value',
+                                    barmode='group',
+                                    height=500,
+                                    plot_bgcolor='white',
+                                    paper_bgcolor='white',
+                                    font=dict(color='#000000', size=12),
+                                    legend=dict(font=dict(color='#000000', size=12))
+                                )
+                                st.plotly_chart(fig, use_container_width=True)
+                                
+                                st.markdown("""
+                                <div class="description-box">
+                                <strong>Analysis Results:</strong>
+                                <ul>
+                                <li>Both algorithms found the same number of itemsets (235) and rules (82)</li>
+                                <li>In this specific analysis, Apriori completed in 3.0763 seconds while FP-Growth took 4.5387 seconds</li>
+                                <li>While FP-Growth is generally faster for large datasets, the performance can vary based on data characteristics</li>
+                                <li>Both algorithms produce identical results in terms of itemsets and rules discovered</li>
+                                </ul>
+                                </div>
+                                """, unsafe_allow_html=True)
                         else:
                             st.warning("No frequent itemsets found. Try lowering the minimum support.")
                     except Exception as e:
@@ -1501,6 +1574,71 @@ if df is not None:
         <strong>Description:</strong> This analysis predicts which orders will be "big orders" 
         (total value > £500) based on order characteristics. Understanding factors that lead to 
         big orders helps in inventory planning and customer targeting.
+        </div>
+        """, unsafe_allow_html=True)
+        st.markdown("<div class='spacer'></div>", unsafe_allow_html=True)
+        
+        # Model Performance Metrics
+        st.markdown('<h3 class="subsection-header">Model Performance Comparison</h3>', unsafe_allow_html=True)
+        
+        # Model results from notebook
+        model_results = pd.DataFrame({
+            'Model': ['Random Forest', 'XGBoost'],
+            'Accuracy': [0.969, 0.972],
+            'F1-Score': [0.844, 0.863]
+        })
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.markdown("**Random Forest Model (H2)**")
+            st.metric("Accuracy", f"{model_results.loc[0, 'Accuracy']:.3f}")
+            st.metric("F1-Score", f"{model_results.loc[0, 'F1-Score']:.3f}")
+        
+        with col2:
+            st.markdown("**XGBoost Model (H2)**")
+            st.metric("Accuracy", f"{model_results.loc[1, 'Accuracy']:.3f}")
+            st.metric("F1-Score", f"{model_results.loc[1, 'F1-Score']:.3f}")
+        
+        # Visualization of model comparison
+        fig = go.Figure()
+        fig.add_trace(go.Bar(
+            name='Accuracy',
+            x=model_results['Model'],
+            y=model_results['Accuracy'],
+            marker_color='#A8D5E3',
+            text=[f"{val:.3f}" for val in model_results['Accuracy']],
+            textposition='outside'
+        ))
+        fig.add_trace(go.Bar(
+            name='F1-Score',
+            x=model_results['Model'],
+            y=model_results['F1-Score'],
+            marker_color='#14b8a6',
+            text=[f"{val:.3f}" for val in model_results['F1-Score']],
+            textposition='outside'
+        ))
+        fig.update_layout(
+            title='Model Performance: Accuracy and F1-Score Comparison',
+            xaxis_title='Model',
+            yaxis_title='Score',
+            barmode='group',
+            height=500,
+            plot_bgcolor='white',
+            paper_bgcolor='white',
+            font=dict(color='#000000', size=12),
+            legend=dict(font=dict(color='#000000', size=12))
+        )
+        st.plotly_chart(fig, use_container_width=True)
+        
+        st.markdown("""
+        <div class="description-box">
+        <strong>Description:</strong> Both Random Forest and XGBoost models were trained to predict big orders (>£500).
+        <ul>
+        <li><strong>Random Forest:</strong> Achieved 96.9% accuracy and 84.4% F1-Score</li>
+        <li><strong>XGBoost:</strong> Achieved 97.2% accuracy and 86.3% F1-Score, showing slightly better performance</li>
+        </ul>
+        Both models demonstrate strong predictive capability for identifying high-value orders.
         </div>
         """, unsafe_allow_html=True)
         st.markdown("<div class='spacer'></div>", unsafe_allow_html=True)
