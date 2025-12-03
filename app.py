@@ -1272,32 +1272,6 @@ if df is not None:
         st.dataframe(profile, use_container_width=True)
         st.markdown("<div class='spacer'></div>", unsafe_allow_html=True)
         
-        # Snake plot
-        st.markdown('<h3 class="subsection-header">Cluster Comparison (Snake Plot)</h3>', unsafe_allow_html=True)
-        rfm_normalized = rfm[['Cluster', 'Recency', 'Frequency', 'Monetary']].copy()
-        for col in ['Recency', 'Frequency', 'Monetary']:
-            rfm_normalized[col] = (rfm_normalized[col] - rfm_normalized[col].mean()) / rfm_normalized[col].std()
-        
-        rfm_melt = pd.melt(rfm_normalized, id_vars=['Cluster'], 
-                          value_vars=['Recency', 'Frequency', 'Monetary'],
-                          var_name='Metric', value_name='Value')
-        
-        fig = px.line(rfm_melt, x='Metric', y='Value', color='Cluster', 
-                     markers=True, title='Snake Plot – Cluster Profiles',
-                     color_discrete_sequence=['#A8D5E3', '#14b8a6', '#8b5cf6', '#10b981', '#f59e0b', '#f97316', '#3b82f6', '#06b6d4'])
-        fig.update_traces(line=dict(width=3))
-        fig = update_chart_layout(fig, height=500)
-        st.plotly_chart(fig, use_container_width=True)
-        
-        st.markdown("""
-        <div class="description-box">
-        <strong>Description:</strong> The snake plot shows normalized RFM values for each cluster, 
-        making it easy to compare cluster characteristics. Each line represents a cluster's profile 
-        across the three RFM dimensions.
-        </div>
-        """, unsafe_allow_html=True)
-        st.markdown("<div class='spacer'></div>", unsafe_allow_html=True)
-        
         # Boxplots
         st.markdown('<h3 class="subsection-header">RFM Distributions by Cluster</h3>', unsafe_allow_html=True)
         col1, col2, col3 = st.columns(3)
