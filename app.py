@@ -1583,7 +1583,7 @@ if df is not None:
         
         # Model results from notebook
         model_results = pd.DataFrame({
-            'Model': ['Random Forest', 'XGBoost'],
+            'Model': ['XGBoost', 'Random Forest'],
             'Accuracy': [0.969, 0.972],
             'F1-Score': [0.844, 0.863]
         })
@@ -1591,12 +1591,12 @@ if df is not None:
         col1, col2 = st.columns(2)
         
         with col1:
-            st.markdown("**Random Forest Model (H2)**")
+            st.markdown("**XGBoost Model**")
             st.metric("Accuracy", f"{model_results.loc[0, 'Accuracy']:.3f}")
             st.metric("F1-Score", f"{model_results.loc[0, 'F1-Score']:.3f}")
         
         with col2:
-            st.markdown("**XGBoost Model (H2)**")
+            st.markdown("**Random Forest Model**")
             st.metric("Accuracy", f"{model_results.loc[1, 'Accuracy']:.3f}")
             st.metric("F1-Score", f"{model_results.loc[1, 'F1-Score']:.3f}")
         
@@ -1635,8 +1635,8 @@ if df is not None:
         <div class="description-box">
         <strong>Description:</strong> Both Random Forest and XGBoost models were trained to predict big orders (>£500).
         <ul>
-        <li><strong>Random Forest:</strong> Achieved 96.9% accuracy and 84.4% F1-Score</li>
-        <li><strong>XGBoost:</strong> Achieved 97.2% accuracy and 86.3% F1-Score, showing slightly better performance</li>
+        <li><strong>XGBoost:</strong> Achieved 96.9% accuracy and 84.4% F1-Score</li>
+        <li><strong>Random Forest:</strong> Achieved 97.2% accuracy and 86.3% F1-Score, showing slightly better performance</li>
         </ul>
         Both models demonstrate strong predictive capability for identifying high-value orders.
         </div>
