@@ -1362,8 +1362,8 @@ if df is not None:
                 min_support = st.slider("Minimum Support", 0.01, 0.1, 0.02, 0.01,
                                        help="Minimum frequency of itemset occurrence")
             with col2:
-                min_lift = st.slider("Minimum Lift", 1.0, 5.0, 1.5, 0.1,
-                                    help="Minimum lift threshold for association rules")
+                min_lift = st.slider("Minimum Confidence", 1.0, 5.0, 1.5, 0.1,
+                                    help="Minimum Confidence threshold for association rules")
             
             if st.button("Run Market Basket Analysis", type="primary"):
                 with st.spinner("Analyzing frequent itemsets for United Kingdom..."):
